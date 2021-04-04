@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
+    <title>SampleAppDemo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet>"
   </head>
 
+  <header>
+    <h1 class="headline">ALL list</h1>
+  </header>
+
   <body>
+
+  <nav>
+    <u1 class="nav-list">
+      <li class="nav-list-item">
+        <%= link_to "Top",top_path %>
+        </li>
+      <li class="nav-list-item">
+        <%= link_to"Todolists", todolists_path %>
+      </li>
+      <li class="nav-list-item">
+        <%= link_to"New List", todolists_path %>
+      </li>
+    </u1>
+  </nav>
+   <main>
     <%= yield %>
+    </main>
   </body>
 </html>
